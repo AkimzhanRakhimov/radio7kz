@@ -1,0 +1,98 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.banner {
+    display: none;
+}
+.layout {
+    position: relative;
+}
+table th,
+table td {
+    padding: 8px;
+    border: 1px solid rgb(150, 0, 15);
+    font-size: 80%;
+}
+
+table th {
+    background-color: rgb(150, 0, 15);
+    color: white;
+    text-align: left;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.buttons-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.toggle-button {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    background-color: rgb(215, 215, 215);
+}
+
+.active {
+    background-color: rgb(150, 0, 15);
+    color: white;
+}
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 2px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    color: #333;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+.pagination .active {
+    background-color: rgb(150, 0, 15);
+    color: white;
+}
+.form-changing button {
+    background-color: #ff3333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-changing button:hover {
+    background-color: #cc0000;
+}
+
+@media screen and (min-width: 1440px) {
+    table th,
+    table td {
+        font-size: 100%;
+    }
+}

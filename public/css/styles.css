@@ -1,0 +1,1208 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Inter", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.banner {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+}
+.banner-image {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+}
+.layout {
+    background-color: rgb(235, 235, 235);
+
+    position: absolute;
+    top: 0;
+    font-size: 110%;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-leak {
+    text-decoration: none;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.numbers {
+    display: flex;
+}
+.call-number {
+    white-space: nowrap;
+}
+.logo-image {
+    width: 212px;
+    height: 57px;
+}
+.menuItem {
+    padding: 0.3em 0.6em;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 100%;
+    color: black;
+    transition: color 0.3s ease;
+}
+.menuItem:hover {
+    color: rgb(45, 45, 45);
+}
+.rounded {
+    background-color: rgb(175, 0, 15);
+    color: rgb(10, 10, 10);
+    border-radius: 1em;
+    transition: background-color 0.5s ease;
+}
+.rounded:hover {
+    background-color: rgb(150, 0, 15);
+    color: rgb(0, 0, 0);
+}
+.layout-line {
+    position: absolute;
+    width: 98%;
+    border: 0.1em solid rgb(160, 160, 160);
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.layout-h3 {
+    position: absolute;
+    font-size: 150%;
+    font-weight: 500;
+    color: rgb(215, 215, 215);
+    top: 120%;
+}
+.layout-h1 {
+    position: absolute;
+    width: 40%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 250%;
+    color: rgb(215, 215, 215);
+    left: 12%;
+    top: 275%;
+}
+.call-order {
+    position: absolute;
+    width: 40%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 250%;
+    padding: 0.3em;
+    text-decoration: none;
+    left: 12%;
+    top: 550%;
+    color: white;
+}
+.call-order:hover {
+    color: rgb(230, 230, 230);
+}
+.section-container {
+    margin: 2em 0;
+    padding: 0 1.5em;
+}
+.heading {
+    font-size: 250%;
+    font-weight: 500;
+    color: rgb(150, 0, 15);
+}
+.service-cards {
+    display: flex;
+    margin-top: 2em;
+}
+.service-card {
+    font-size: 80%;
+    margin-bottom: 0.5em;
+    width: 25%;
+    align-items: center;
+    text-align: center;
+}
+
+.service-image {
+    height: 10em;
+}
+.service-paragraph {
+    padding: 2px 0;
+}
+.about-company {
+    padding: 0.5em 1em;
+    font-size: 120%;
+    font-weight: 600;
+}
+.principle-container {
+    display: flex;
+    padding: 0.5em 2em;
+    gap: 2%;
+    align-items: center;
+}
+
+.principles {
+    font-size: 120%;
+    font-weight: 400;
+}
+.principle-image {
+    width: 40%;
+    object-fit: cover;
+}
+.review-cards {
+    padding: 1em;
+    margin-top: 2em;
+    display: flex;
+    overflow-x: auto;
+    overflow-x: hidden;
+    cursor: pointer;
+    -webkit-overflow-scrolling: touch;
+    gap: 2%;
+}
+.review-card {
+    padding: 1em;
+    flex: 0 0 auto;
+    border: 0.1em solid #ccc;
+    background-color: #fff;
+    border-radius: 1em;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    width: 30%;
+    height: 28em;
+    text-overflow: ellipsis;
+}
+.person {
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    justify-content: left;
+}
+.person-photo {
+    width: 4em;
+    height: 4em;
+    object-fit: cover;
+    border-radius: 2em;
+}
+.person-review {
+    margin-top: 1.5em;
+    text-align: left;
+}
+ul {
+    list-style: none;
+}
+li:before {
+    content: "•";
+    margin-right: 3px;
+}
+li {
+    line-height: 1.25em;
+}
+.leak-container {
+    position: absolute;
+    bottom: 20px;
+}
+.read-more {
+    text-decoration: none;
+    color: rgb(150, 0, 15);
+}
+.review {
+    -webkit-line-clamp: 14;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.client-row {
+    margin-top: 2.5em;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+.client-container {
+    width: 25%;
+    height: 12em;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1);
+    border: 0.1em solid #ccc;
+    padding: 2em;
+    border-radius: 1em;
+    overflow: hidden;
+}
+.client-logo {
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+}
+.form-container {
+    max-width: 800px;
+    margin: 2em auto;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 2em;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: 0.1em solid #ccc;
+    border-radius: 1em;
+    font-size: 100%;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75em;
+    border: none;
+    border-radius: 1em;
+    background-color: rgb(175, 0, 15);
+    color: #fff;
+    font-size: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+    background-color: rgb(150, 0, 15);
+}
+.form-group textarea {
+    resize: none;
+}
+.privacy-text {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 80%;
+    color: #555;
+}
+.contact-row {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+.insta {
+    display: flex;
+    align-items: center;
+}
+.insta-logo {
+    width: 4em;
+}
+.map {
+    width: 100%;
+    height: 20em;
+}
+.ending {
+    text-align: center;
+    width: 25%;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+
+    border-radius: 1em;
+    margin: 10% auto;
+    padding: 1em;
+    border: 0.1em solid #888;
+    width: 40%;
+}
+.modal-review {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-review-content {
+    background-color: #fefefe;
+
+    border-radius: 1em;
+    margin: 10% auto;
+    padding: 1em;
+    border: 0.1em solid #888;
+    width: 80%;
+    font-size: 90%;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 160%;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.burger-menu {
+    display: none;
+
+    flex-direction: column;
+    cursor: pointer;
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(160, 160, 160);
+    margin: 3px 0;
+}
+
+.advantage {
+    position: relative;
+
+    width: 100%;
+    margin-bottom: 4em;
+}
+.advantage .advantage-wrap {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+.advantage .advantage-wrap .header-text {
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+
+    color: rgb(150, 0, 15);
+    text-transform: uppercase;
+    text-shadow: 0px 0px 1px;
+    margin-top: 25px;
+}
+.advantage .advantage-wrap .advantage-line {
+    max-width: 1200px;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+.advantage .advantage-wrap .advantage-line .block {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 125px;
+    margin-top: 70px;
+    box-sizing: border-box;
+}
+.advantage .advantage-wrap .advantage-line.first .block:nth-of-type(1) {
+    background: url(../images/adv1.jpg) 27px center no-repeat,
+        url(../images/bg.png) left top no-repeat;
+}
+.advantage .advantage-wrap .advantage-line.first .block:nth-of-type(2) {
+    background: url(../images/adv2.jpg) 27px center no-repeat,
+        url(../images/bg.png) left top no-repeat;
+}
+.advantage .advantage-wrap .advantage-line.first .block:nth-of-type(3) {
+    background: url(../images/adv3.jpg) 33px center no-repeat,
+        url(../images/bg.png) left top no-repeat;
+}
+.advantage .advantage-wrap .advantage-line.second .block:nth-of-type(1) {
+    background: url(../images/adv4.jpg) 33px center no-repeat,
+        url(../images/bg.png) left top no-repeat;
+}
+.advantage .advantage-wrap .advantage-line.second .block:nth-of-type(2) {
+    background: url(../images/adv5.jpg) 25px center no-repeat,
+        url(../images/bg.png) left top no-repeat;
+}
+.advantage .advantage-wrap .advantage-line.second .block:nth-of-type(3) {
+    background: url(../images/adv6.jpg) 42px center no-repeat,
+        url(../images/bg.png) left top no-repeat;
+}
+.advantage .advantage-wrap .advantage-line .block .above-text {
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 19px;
+    color: rgb(150, 0, 15);
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+.advantage .advantage-wrap .advantage-line .block .under-text {
+    color: rgb(150, 0, 15);
+    font-size: 16px;
+}
+.clears {
+    clear: both;
+}
+.scroll-container {
+    position: relative;
+}
+
+.scroll-left,
+.scroll-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+    font-size: 24px; /* увеличиваем размер кнопок */
+    cursor: pointer;
+    width: 40px; /* задаем ширину кнопок */
+    height: 40px; /* задаем высоту кнопок */
+    border-radius: 50%; /* делаем круглые кнопки */
+    border: 2px solid rgb(190, 190, 190); /* добавляем круглую рамку */
+}
+
+.scroll-left {
+    left: 10px; /* отступ слева */
+}
+
+.scroll-right {
+    right: 10px; /* отступ справа */
+}
+@media screen and (max-width: 1260px) {
+    .principles {
+        font-size: 140%;
+    }
+    .about-company {
+        font-size: 140%;
+    }
+    .principle-image {
+        width: 45%;
+    }
+    .layout-h1 {
+        font-size: 220%;
+        top: 275%;
+    }
+    .call-order {
+        font-size: 220%;
+        top: 525%;
+    }
+    .modal-content {
+        width: 70%;
+        margin: 12% auto;
+    }
+    .modal-review-content {
+        font-size: 80%;
+        margin: 12% auto;
+    }
+    .logo-image {
+        width: 170px;
+        height: 46px;
+    }
+    .menuItem {
+        font-size: 90%;
+    }
+    .call-number {
+        font-size: 90%;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .advantage .advantage-wrap .advantage-line {
+        max-width: 900px;
+    }
+
+    .layout-h1 {
+        font-size: 200%;
+        top: 225%;
+    }
+
+    .call-order {
+        font-size: 200%;
+        top: 450%;
+    }
+    .call-number {
+        font-size: 80%;
+    }
+    .logo-container {
+        font-size: 80%;
+    }
+    .menuItem {
+        font-size: 80%;
+    }
+    .layout-h3 {
+        font-size: 100%;
+    }
+    .review-card {
+        font-size: 80%;
+    }
+    .client-container {
+        height: 9em;
+    }
+
+    .advantage .advantage-wrap .advantage-line.first .block:nth-of-type(3) {
+        display: none;
+    }
+    .advantage .advantage-wrap .advantage-line.second .block:nth-of-type(3) {
+        display: none;
+    }
+}
+@media screen and (max-width: 980px) {
+    .logo-image {
+        width: 140px;
+        height: 38px;
+    }
+    .layout-h1 {
+        font-size: 170%;
+        top: 230%;
+    }
+    .call-order {
+        font-size: 170%;
+        top: 500%;
+    }
+    .principles {
+        font-size: 100%;
+    }
+
+    .principle-image {
+        width: 50%;
+    }
+    .modal-content {
+        margin: 15% auto;
+    }
+    .advantage .advantage-wrap .advantage-line {
+        max-width: 800px;
+    }
+    .menuItem {
+        font-size: 70%;
+    }
+    .call-number {
+        font-size: 70%;
+    }
+}
+@media screen and (max-width: 910px) {
+    .numbers {
+        display: block;
+    }
+    .service-card {
+        font-size: 70%;
+    }
+    .heading {
+        font-size: 160%;
+    }
+    .principles {
+        font-size: 90%;
+    }
+    .about-company {
+        font-size: 90%;
+    }
+    .layout-h1 {
+        font-size: 160%;
+        top: 220%;
+    }
+    .call-order {
+        font-size: 140%;
+        top: 380%;
+    }
+    .call-number {
+        font-size: 70%;
+    }
+    .logo-container {
+        font-size: 70%;
+    }
+    .menuItem {
+        font-size: 70%;
+    }
+    .layout-h3 {
+        font-size: 80%;
+    }
+    .burger-menu {
+        display: flex;
+    }
+    .items {
+        display: none;
+    }
+    .menuItem {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: rgb(215, 215, 215);
+        transition: background-color 0.3s;
+    }
+    .menuItem.rounded {
+        border-radius: 0;
+        background-color: rgb(235, 235, 235);
+    }
+    .items.active {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(235, 235, 235);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .menuItem {
+        color: rgb(25, 25, 25);
+    }
+    .menuItem:hover {
+        color: rgb(50, 50, 50);
+    }
+    .logo-image {
+        width: 180px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .advantage .advantage-wrap .advantage-line {
+        max-width: 760px;
+    }
+    .layout-h1 {
+        font-size: 120%;
+        top: 225%;
+    }
+    .call-order {
+        font-size: 120%;
+        top: 350%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .layout-h1 {
+        font-size: 225%;
+        top: 380%;
+        width: 80%;
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+    .call-order {
+        font-size: 225%;
+        top: 700%;
+        width: 80%;
+
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .layout-h3 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .banner-image {
+        height: 80vh;
+        object-fit: cover;
+    }
+    .call-number {
+        margin-right: 30%;
+    }
+
+    .service-cards {
+        flex-wrap: wrap;
+    }
+    .service-card {
+        margin-top: 2%;
+        width: 50%;
+    }
+    .heading {
+        font-size: 180%;
+    }
+    .about-company {
+        font-size: 140%;
+    }
+    .principle-container {
+        text-align: center;
+        display: block;
+    }
+    .principles {
+        font-size: 140%;
+    }
+    .principle-image {
+        margin-top: 3%;
+        width: 100%;
+    }
+    .to-hide {
+        display: none;
+    }
+    .review-card {
+        width: 45%;
+    }
+    .client-container {
+        width: 45%;
+    }
+    .form-container {
+        max-width: 600px;
+    }
+    .contact-row {
+        font-size: 80%;
+    }
+    .modal-review-content {
+        font-size: 70%;
+    }
+
+    .advantage .advantage-wrap .advantage-line.second .block:nth-of-type(2) {
+        display: none;
+    }
+    .advantage .advantage-wrap .advantage-line.first {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .advantage .advantage-wrap .advantage-line.second {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .scroll-left,
+    .scroll-right {
+        font-size: 20px; /* Adjust font size for smaller screens */
+        width: 30px; /* Adjust button size for smaller screens */
+        height: 30px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .layout-h1 {
+        font-size: 200%;
+    }
+    .call-order {
+        font-size: 200%;
+    }
+    .layout-h3 {
+        font-size: 50%;
+    }
+    .banner-image {
+        height: 80vh;
+    }
+    .modal-content {
+        width: 75%;
+        margin: 20% auto;
+    }
+    .modal-review-content {
+        margin: 20% auto;
+    }
+    .advantage .advantage-wrap .advantage-line {
+        max-width: 700px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .principle-container {
+        font-size: 80%;
+    }
+    .form-container {
+        max-width: 400px;
+    }
+    .modal-content {
+        margin: 25% auto;
+    }
+    .modal-review-content {
+        margin: 25% auto;
+    }
+    .advantage .advantage-wrap .advantage-line {
+        max-width: 600px;
+    }
+}
+@media screen and (max-width: 560px) {
+    .call-number {
+        font-size: 70%;
+    }
+    .logo-container {
+        font-size: 70%;
+    }
+    .menuItem {
+        font-size: 70%;
+    }
+    .review-card {
+        width: 95%;
+        font-size: 110%;
+    }
+    .client-container {
+        width: 80%;
+        height: 12em;
+    }
+    .to-hide-on-phone {
+        display: none;
+    }
+    .service-card {
+        width: 100%;
+        font-size: 80%;
+    }
+    .ending {
+        width: 100%;
+    }
+    .banner-image {
+        height: 70vh;
+    }
+    .modal-content {
+        margin: 30% auto;
+    }
+    .advantage .advantage-wrap .advantage-line {
+        max-width: 500px;
+    }
+    .advantage .advantage-wrap .header-text {
+        font-size: 30px;
+    }
+    .call-order {
+        top: 600%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .layout-h3 {
+        font-size: 60%;
+    }
+    .layout-h1 {
+        font-size: 175%;
+        top: 450%;
+    }
+    .call-order {
+        font-size: 175%;
+        top: 700%;
+    }
+    .form-container {
+        font-size: 80%;
+        max-width: 300px;
+    }
+    .contact-row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .insta {
+        display: flex;
+        flex-direction: column;
+        gap: 1%;
+        justify-content: center;
+    }
+    .modal-content {
+        width: 90%;
+        font-size: 80%;
+        margin: 35% auto;
+    }
+    .modal-review-content {
+        margin: 30% auto;
+    }
+    .advantage .advantage-wrap .advantage-line {
+        max-width: 400px;
+    }
+    .logo-image {
+        width: 130px;
+        height: 36px;
+    }
+}
+@media screen and (max-width: 420px) {
+    .layout-h3 {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 110%;
+    }
+    .about-company {
+        font-size: 80%;
+    }
+    .principle-container {
+        font-size: 80%;
+    }
+}
+@media screen and (max-width: 402px) {
+    .call-number {
+        margin: 0;
+    }
+    .layout-h1 {
+        font-size: 150%;
+        top: 475%;
+    }
+    .call-order {
+        font-size: 150%;
+        top: 725%;
+    }
+    .review-card {
+        font-size: 80%;
+    }
+    .advantage .advantage-wrap .advantage-line {
+        max-width: 320px;
+    }
+    .advantage .advantage-wrap .advantage-line .block .above-text {
+        font-size: 16px;
+    }
+    .advantage .advantage-wrap .advantage-line .block .under-text {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 1550px) {
+    .call-number {
+        font-size: 130%;
+    }
+    .logo-container {
+        font-size: 130%;
+    }
+    .menuItem {
+        font-size: 130%;
+    }
+    .layout-h3 {
+        font-size: 180%;
+    }
+    .layout-h1 {
+        font-size: 300%;
+        top: 275%;
+    }
+    .call-order {
+        font-size: 300%;
+        top: 575%;
+    }
+    .form-container {
+        font-size: 120%;
+    }
+    .service-card {
+        font-size: 90%;
+    }
+    .service-image {
+        height: 12em;
+    }
+    .review-card {
+        font-size: 130%;
+    }
+    .modal-content {
+        font-size: 110%;
+    }
+    .modal-review-content {
+        font-size: 110%;
+    }
+    .advantage .advantage-wrap .advantage-line .block .above-text {
+        font-size: 21px;
+    }
+    .advantage .advantage-wrap .advantage-line .block .under-text {
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 1756px) {
+    .advantage .advantage-wrap .advantage-line {
+        max-width: 1400px;
+    }
+    .call-number {
+        font-size: 150%;
+    }
+    .logo-container {
+        font-size: 150%;
+    }
+    .menuItem {
+        font-size: 150%;
+    }
+
+    .review-card {
+        font-size: 150%;
+    }
+    .layout-h1 {
+        font-size: 350%;
+        top: 300%;
+    }
+    .call-order {
+        font-size: 350%;
+        top: 650%;
+    }
+    .heading {
+        font-size: 350%;
+    }
+    .contact-row {
+        font-size: 140%;
+    }
+    .about-company {
+        font-size: 240%;
+    }
+    .client-container {
+        height: 15em;
+    }
+    .principles {
+        font-size: 240%;
+    }
+    .form-container {
+        font-size: 140%;
+        max-width: 1000px;
+    }
+    .modal-content {
+        font-size: 120%;
+    }
+    .modal-review-content {
+        font-size: 120%;
+    }
+    .advantage .advantage-wrap .advantage-line .block .above-text {
+        font-size: 23px;
+    }
+    .advantage .advantage-wrap .advantage-line .block .under-text {
+        font-size: 20px;
+    }
+    .logo-image {
+        width: 250px;
+        height: 67.5px;
+    }
+    .scroll-left,
+    .scroll-right {
+        font-size: 30px; /* Adjust font size for smaller screens */
+        width: 50px; /* Adjust button size for smaller screens */
+        height: 50px;
+    }
+}
+@media screen and (min-width: 1900px) {
+    .layout-h1 {
+        top: 400%;
+    }
+    .call-order {
+        top: 750%;
+    }
+    .advantage .advantage-wrap .advantage-line .block .above-text {
+        font-size: 25px;
+    }
+    .advantage .advantage-wrap .advantage-line .block .under-text {
+        font-size: 21px;
+    }
+    .scroll-left,
+    .scroll-right {
+        font-size: 40px; /* Adjust font size for smaller screens */
+        width: 60px; /* Adjust button size for smaller screens */
+        height: 60px;
+    }
+}
+@media screen and (min-width: 2100px) {
+    .call-number {
+        font-size: 170%;
+    }
+    .logo-container {
+        font-size: 170%;
+    }
+    .menuItem {
+        font-size: 170%;
+    }
+    .service-card {
+        font-size: 120%;
+    }
+    .review-card {
+        font-size: 170%;
+    }
+    .layout-h3 {
+        font-size: 200%;
+    }
+    .layout-h1 {
+        font-size: 370%;
+        top: 350%;
+    }
+    .call-order {
+        font-size: 370%;
+        top: 650%;
+    }
+    .heading {
+        font-size: 370%;
+    }
+    .advantage .advantage-wrap .advantage-line {
+        max-width: 1700px;
+    }
+    .form-container {
+        font-size: 180%;
+        max-width: 1200px;
+    }
+    .client-container {
+        height: 18em;
+    }
+    .contact-row {
+        font-size: 160%;
+    }
+    .modal-content {
+        font-size: 130%;
+    }
+    .modal-review-content {
+        font-size: 130%;
+    }
+    .advantage .advantage-wrap .advantage-line .block .above-text {
+        font-size: 27px;
+    }
+    .advantage .advantage-wrap .advantage-line .block .under-text {
+        font-size: 23px;
+    }
+    .advantage .advantage-wrap .advantage-line.first .block:nth-of-type(1) {
+        background: url(../images/adv1.jpg) 27px center no-repeat,
+            url(../images/bg.png) left no-repeat;
+    }
+    .advantage .advantage-wrap .advantage-line.first .block:nth-of-type(2) {
+        background: url(../images/adv2.jpg) 27px center no-repeat,
+            url(../images/bg.png) left no-repeat;
+    }
+    .advantage .advantage-wrap .advantage-line.first .block:nth-of-type(3) {
+        background: url(../images/adv3.jpg) 33px center no-repeat,
+            url(../images/bg.png) left no-repeat;
+    }
+    .advantage .advantage-wrap .advantage-line.second .block:nth-of-type(1) {
+        background: url(../images/adv4.jpg) 33px center no-repeat,
+            url(../images/bg.png) left no-repeat;
+    }
+    .advantage .advantage-wrap .advantage-line.second .block:nth-of-type(2) {
+        background: url(../images/adv5.jpg) 25px center no-repeat,
+            url(../images/bg.png) left no-repeat;
+    }
+    .advantage .advantage-wrap .advantage-line.second .block:nth-of-type(3) {
+        background: url(../images/adv6.jpg) 42px center no-repeat,
+            url(../images/bg.png) left no-repeat;
+    }
+}
+@media screen and (min-width: 2300px) {
+    .logo-image {
+        width: 333px;
+        height: 90px;
+    }
+    .call-number {
+        font-size: 190%;
+    }
+    .logo-container {
+        font-size: 190%;
+    }
+    .menuItem {
+        font-size: 190%;
+    }
+    .layout-h3 {
+        font-size: 220%;
+    }
+    .advantage .advantage-wrap .advantage-line {
+        max-width: 1900px;
+    }
+
+    .layout-h1 {
+        font-size: 390%;
+        top: 350%;
+    }
+    .call-order {
+        font-size: 390%;
+        top: 650%;
+    }
+    .heading {
+        font-size: 390%;
+    }
+    .review-card {
+        font-size: 190%;
+    }
+    .modal-content {
+        font-size: 140%;
+    }
+    .modal-review-content {
+        font-size: 140%;
+    }
+}
