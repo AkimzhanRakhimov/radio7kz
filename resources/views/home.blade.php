@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <title>Рекламное агенство Arna multimedia</title>  
+        <title>Радио 7 Семей/title>  
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">    
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
