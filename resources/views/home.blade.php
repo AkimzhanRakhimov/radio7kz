@@ -13,7 +13,7 @@
     </head>
     <body>
         <header>
-                <div class="header-container">
+               
                  
                     <div class="container layout">
                     <a href="" class="logo-leak">
@@ -42,12 +42,33 @@
                         
                     </div> 
                     <img src="images/banner.png" alt="" class="banner-image">                  
-            </div>
+        
             
         </header>
 
         <section>
-   
+            <div class="container section-container" id="order">
+                <h1 class="heading">О нас</h1>
+                <div class="flexed"> <div class="centrified">
+                    <p>7 Мая 2001 года – первый выход «Радио 7» в эфир на частоте 106,9 FM.    <br> <br>
+                        Формат Hot AC/CHR – Динамичная музыка для активных и позитивных (20 – 40 лет). <br> <br>
+                        </p></div> <img src="images/design.png" class="logo-big" alt="">
+                   </div>
+                   <div class="after-flexed">  <p>«Радио 7» — музыкальная радиостанция в г. Семей с собственной службой новостей. Основной акцент в новостях делается на городские события. Информационные выпуски выходят ежедневно по будням с 07:00 до 19:00
+                    <br> <br>
+                    Зона уверенного приема – 35-40 км.
+                    <br> <br>
+                    Миссия «Радио 7», в нашем понимании, — создавать уютную, семейную атмосферу для каждого горожанина или гостя Семея, ориентируя наших слушателей в самых разных жизненных проявлениях, будь то музыка или новости, интернет или театр, литература и кино, отдых, развлечения и путешествия. Главное в нашей работе — быть максимально полезными городу и его жителям, поддержать и помочь им в стремлении совершенствоваться и делать мир добрее, отзывчивей, лучше.
+                    <br> <br>
+                    Мы очень гордимся, что согласно опросам*, большинство наших земляков, называя самую слушаемую для них радиостанцию выбирали «Радио 7»
+                    <br> <br>
+                    В эфир выходят программы как. произведенные в собственной Production студии, так и приобретенные у партнеров других студий (студия «Апельсин» г. Москва, студия «Седьмое небо» г. Казань). Среди них каждый радиослушатель может найти познавательную или развлекательную программу на свой вкус. Подробнее о каждой из них вы можете прочитать в разделе «Программы»
+                    <br> <br>
+                    В Production студии изготовляется радиореклама и другая аудиопродукция.
+                    <br> <br>
+                    На «Радио 7» самый широкий в городе спектр рекламных возможностей — индивидуальные (дополнительные) рекламные блоки, объявления, спонсирование программ и игр, рекламные акции.</p> </div>
+                  
+            </div>
     <div class="container section-container" id="order">
         <h1 class="heading">Связаться</h1>
         <div class="form-container">
@@ -58,22 +79,14 @@
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Введите вашу почту:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
                     <label for="phone">Введите ваш номер телефона:</label>
                     <input type="text" id="phone" name="phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="company">Введите название вашей компании:</label>
-                    <input type="text" id="company" name="company" required>
-                </div>
-                <div class="form-group">
-                    <label for="order">Что вы хотите заказать*:</label>
+                    <label for="order">Сообщение*:</label>
                     <textarea id="order" name="order" rows="5" required></textarea>
                 </div>
-                <button type="submit"  class="submit-btn">Отправить заявку</button>
+                <button type="submit"  class="submit-btn">Связаться</button>
             </form>
             <p class="privacy-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных.</p>
         </div>
@@ -82,22 +95,22 @@
         </section>
         <footer>
             <div class="container section-container" id="contacts">
-                <h1 class="heading">Контакты</h1>
+                <h1 class="heading white">Контакты</h1>
                 <div class="contact-row">
-                    <p class="contact-column">
+                    <p class="contact-column white">
                         Семей, ул. Мәңгілік Ел,26
                     </p>
                     <div class="numbers">
-                        <p class="contact-column">
-                            +7 (708) 467 12 61, &nbsp
+                        <p class="contact-column white">
+                            8 (7222) 56 84 65, &nbsp
                         </p>
-                        <p class="contact-column">
-                            +7 722-267 12 61
+                        <p class="contact-column white">
+                            8 (7222) 52 44 65
                         </p>
                     </div>
                    
-                    <p class="contact-column">
-                        info@arnamultimedia.kz
+                    <p class="contact-column white">
+                        info@radio7.kz
                     </p>
                 </div>
     
@@ -105,25 +118,22 @@
                 <div class="contact-row">
                     <div class="insta">
                         <img class="insta-logo" src="images/instagram.png" alt="">
-                        <p class="contact-column">
+                        <p class="contact-column white">
                             @radio_7_semey
                         </p>
                     </div>
-                    <div class="insta">
-                        <img class="insta-logo" src="images/instagram.png" alt="">
-                    <p class="contact-column">
-                        @arnapress_news
-                    </p>
+                    
                     </div>    
                 </div>
                 <br>
     
             </div>
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40680.142483997915!2d80.1865273216797!3d50.4129893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42f26560fccbd983%3A0x9cdcb878b0009585!2sArnamultimedia!5e0!3m2!1sru!2skz!4v1712133434275!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d449.454120814604!2d80.2584528790178!3d50.413221330586914!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42f2653421395555%3A0xd3853bd824eb2579!2z0KDQsNC00LjQviA3!5e0!3m2!1sru!2skz!4v1720080533801!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="container section-container">   
             <div class="contact-row">
-                    <p class="contact-column ending">
-                        Arnamultimedia.kz 2014-2024 <br> © Все права защищены
+                    <p class="contact-column ending white">
+                        © Radio 7 <br> Все права защищены
                     </p>
                 </div>
             </div>
