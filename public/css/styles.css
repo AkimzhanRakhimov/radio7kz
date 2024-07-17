@@ -1,4 +1,6 @@
 * {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,7 +13,6 @@ body {
     font-weight: 500;
     font-style: normal;
 }
-
 .banner {
     display: block;
     width: 100%;
@@ -21,18 +22,29 @@ body {
     display: block;
     width: 100%;
     height: 90vh;
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
 }
 footer {
-    background-color: rgb(102, 1, 122);
+    background: linear-gradient(
+        92.18deg,
+        rgb(117, 1, 92) -25.78%,
+        rgb(78, 7, 92) 123.02%
+    );
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
 }
 
 .container {
-    margin: 0 60px;
+    margin: 0 80px;
 }
-
+.under {
+    margin-top: 30px;
+}
 .items {
     margin-right: 100px;
 }
+
 .layout {
     font-size: 110%;
     padding: 0.5em;
@@ -70,22 +82,19 @@ footer {
     padding: 0.3em 3em;
     text-decoration: none;
     white-space: nowrap;
-    font-size: 100%;
+    font-size: 20px;
     color: black;
     transition: color 0.3s ease;
 }
 .menuItem:hover {
-    color: rgb(85, 0, 81);
+    color: rgb(78, 7, 92);
 }
 
-.section-container {
-    padding: 0 1.5em;
-}
 .heading {
     padding-top: 30px;
-    font-size: 250%;
+    font-size: 45px;
     font-weight: 700;
-    color: rgb(150, 0, 117);
+    color: rgb(117, 1, 92);
 }
 .white {
     color: white;
@@ -100,7 +109,7 @@ li:before {
 li {
     line-height: 1.25em;
 }
-p {
+.paragraph {
     font-size: 1.2em; /* Размер шрифта */
     line-height: 1.6; /* Высота строки */
     color: #333; /* Цвет текста */
@@ -109,7 +118,7 @@ p {
     font-family: "Arial", sans-serif; /* Шрифт */
     padding: 0.5em; /* Внутренний отступ */
 
-    border-left: 4px solid rgb(143, 1, 124); /* Левая граница */
+    border-left: 4px solid rgb(117, 1, 92);
 
     border-radius: 5px; /* Радиус границ */
 }
@@ -151,7 +160,7 @@ p {
 .form-group input[type="email"]:focus,
 .form-group input[type="password"]:focus,
 .form-group textarea:focus {
-    border-color: rgb(143, 1, 124);
+    border-color: rgb(117, 1, 92);
     box-shadow: 0 0 5px rgba(143, 1, 124, 0.5);
     outline: none;
 }
@@ -162,14 +171,22 @@ p {
     padding: 0.75em;
     border: none;
     border-radius: 10px;
-    background-color: rgb(143, 1, 124);
+    background: linear-gradient(
+        92.18deg,
+        rgb(117, 1, 92) -25.78%,
+        rgb(78, 7, 92) 123.02%
+    );
     color: #fff;
-    font-size: 1.1em;
+    font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .submit-btn:hover {
-    background-color: rgb(102, 1, 122);
+    background: linear-gradient(
+        92.18deg,
+        rgb(78, 15, 65) -25.78%,
+        rgb(76, 15, 87) 123.02%
+    );
     transform: translateY(-2px);
 }
 .form-group textarea {
@@ -185,24 +202,31 @@ p {
 
 .contact-row {
     margin-top: 2em;
-    display: flex;
+    display: block;
     justify-content: center;
+
     gap: 10%;
 }
 .insta {
     display: flex;
+
     align-items: center;
 }
 .insta-logo {
     width: 4em;
 }
+.map_and_info {
+    display: flex;
+    gap: 15%;
+}
 .map {
-    width: 100%;
-    height: 20em;
+    width: 40%;
+    border-radius: 5%;
 }
 .ending {
     text-align: center;
-    width: 25%;
+}
+.footer {
     padding-bottom: 100px;
 }
 .modal {
@@ -269,8 +293,134 @@ p {
 .bar {
     width: 25px;
     height: 3px;
-    background-color: rgb(160, 160, 160);
+    background: linear-gradient(92.18deg, #a049e9 -25.78%, #6643db 123.02%);
     margin: 3px 0;
+}
+.audio-container {
+    width: 80%;
+    border-radius: 2em;
+    position: fixed;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+.audio-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.audio-info span {
+    display: block;
+    margin-top: 5px;
+}
+
+.custom-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-controls button {
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(117, 1, 92);
+}
+
+.custom-controls button:focus {
+    outline: none;
+}
+
+.custom-controls button:active {
+    color: rgb(117, 1, 92);
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.volume-control i {
+    font-size: 24px;
+    color: rgb(117, 1, 92);
+}
+
+.volume-control input[type="range"] {
+    width: 100px;
+    cursor: pointer;
+    -webkit-appearance: none; /* Убирает стандартный стиль браузеров на базе WebKit */
+    background: #ddd;
+}
+
+.volume-control input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    background: rgb(117, 1, 92); /* Цвет трека */
+    border-radius: 5px;
+}
+
+.volume-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    background: rgba(143, 1, 124); /* Цвет бегунка */
+    border-radius: 50%;
+    margin-top: -4px; /* Сдвиг чтобы thumb был по центру track */
+}
+
+.volume-control input[type="range"]::-moz-range-track {
+    height: 8px;
+    background: rgb(117, 1, 92); /* Цвет трека */
+    border-radius: 5px;
+}
+
+.volume-control input[type="range"]::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    background: rgba(143, 1, 124); /* Цвет бегунка */
+    border-radius: 50%;
+}
+
+.volume-control input[type="range"]::-ms-track {
+    height: 8px;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+.volume-control input[type="range"]::-ms-fill-lower {
+    background: rgb(117, 1, 92); /* Цвет трека */
+    border-radius: 5px;
+}
+
+.volume-control input[type="range"]::-ms-fill-upper {
+    background: rgba(143, 1, 124); /* Цвет трека */
+    border-radius: 5px;
+}
+
+.volume-control input[type="range"]::-ms-thumb {
+    height: 16px;
+    width: 16px;
+    background: rgb(117, 1, 92); /* Цвет бегунка */
+    border-radius: 50%;
+}
+
+/* Скрыть оригинальный элемент аудио */
+audio.radio {
+    display: none;
 }
 
 @media screen and (max-width: 1260px) {
@@ -284,13 +434,22 @@ p {
     }
     .logo-image {
         width: 170px;
-        height: 46px;
     }
     .menuItem {
         font-size: 90%;
     }
+    .logo-big {
+        width: 360px;
+    }
 }
 @media screen and (max-width: 1150px) {
+    .items {
+        margin-right: 0;
+        font-size: 110%;
+    }
+    .map {
+        width: 60%;
+    }
     .logo-container {
         font-size: 80%;
     }
@@ -301,7 +460,6 @@ p {
 @media screen and (max-width: 980px) {
     .logo-image {
         width: 140px;
-        height: 38px;
     }
 
     .modal-content {
@@ -316,7 +474,33 @@ p {
     .heading {
         font-size: 160%;
     }
-
+    .map {
+        width: 100%;
+        height: 60vh;
+        border-radius: 2em;
+    }
+    .contact-row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .insta {
+        display: flex;
+        flex-direction: column;
+        gap: 1%;
+        justify-content: center;
+    }
+    .hide {
+        display: none;
+    }
+    .map_and_info {
+        flex-direction: column;
+    }
+    .flexed {
+        flex-direction: column;
+    }
+    .logo-big {
+        max-width: 300px;
+    }
     .logo-container {
         font-size: 70%;
     }
@@ -345,12 +529,12 @@ p {
         display: flex;
         position: absolute;
         flex-direction: column;
-        top: 100%;
+        top: 80px;
         left: 0;
         width: 100%;
-        background-color: rgb(235, 235, 235);
+        background-color: rgb(255, 255, 255);
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
+        z-index: 100;
     }
     .menuItem {
         color: rgb(25, 25, 25);
@@ -360,7 +544,6 @@ p {
     }
     .logo-image {
         width: 180px;
-        height: 50px;
     }
 }
 
@@ -371,7 +554,7 @@ p {
     }
 
     .heading {
-        font-size: 180%;
+        font-size: 200%;
     }
     .form-container {
         max-width: 600px;
@@ -398,12 +581,19 @@ p {
 @media screen and (max-width: 640px) {
     .form-container {
         max-width: 400px;
+        padding: 10px;
+    }
+    .banner-image {
+        height: 70vh;
     }
     .modal-content {
         margin: 25% auto;
     }
     .modal-review-content {
         margin: 25% auto;
+    }
+    .audio-container {
+        gap: 10px;
     }
 }
 @media screen and (max-width: 560px) {
@@ -413,12 +603,14 @@ p {
     .menuItem {
         font-size: 70%;
     }
-
+    .footer {
+        padding-bottom: 200px;
+    }
     .ending {
         width: 100%;
     }
     .banner-image {
-        height: 70vh;
+        height: 60vh;
     }
     .modal-content {
         margin: 30% auto;
@@ -428,16 +620,10 @@ p {
     .form-container {
         font-size: 80%;
         max-width: 300px;
+        padding: 20px;
     }
-    .contact-row {
-        flex-direction: column;
-        text-align: center;
-    }
-    .insta {
-        display: flex;
-        flex-direction: column;
-        gap: 1%;
-        justify-content: center;
+    .items.active {
+        top: 65px;
     }
     .modal-content {
         width: 90%;
@@ -449,12 +635,17 @@ p {
     }
     .logo-image {
         width: 130px;
-        height: 36px;
+    }
+    .banner-image {
+        height: 50vh;
     }
 }
 @media screen and (max-width: 420px) {
+    .banner-image {
+        height: 40vh;
+    }
     .heading {
-        font-size: 110%;
+        font-size: 240%;
     }
 }
 
@@ -465,7 +656,9 @@ p {
     .menuItem {
         font-size: 130%;
     }
-
+    .hide {
+        font-size: 130%;
+    }
     .form-container {
         font-size: 120%;
     }
@@ -482,7 +675,7 @@ p {
         font-size: 150%;
     }
     .menuItem {
-        font-size: 150%;
+        font-size: 140%;
     }
 
     .heading {
@@ -505,7 +698,6 @@ p {
 
     .logo-image {
         width: 250px;
-        height: 67.5px;
     }
 }
 @media screen and (min-width: 2100px) {
@@ -513,7 +705,7 @@ p {
         font-size: 170%;
     }
     .menuItem {
-        font-size: 170%;
+        font-size: 140%;
     }
 
     .heading {
@@ -538,16 +730,17 @@ p {
 @media screen and (min-width: 2300px) {
     .logo-image {
         width: 333px;
-        height: 90px;
     }
 
     .logo-container {
         font-size: 190%;
     }
     .menuItem {
-        font-size: 190%;
+        font-size: 140%;
     }
-
+    .items {
+        margin-right: 0;
+    }
     .heading {
         font-size: 390%;
     }

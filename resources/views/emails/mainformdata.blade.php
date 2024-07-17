@@ -7,9 +7,9 @@
 <body>
     <h1>Main Form Data</h1>
     <p>Name: {{ $mainFormData->name }}</p>
-    <p>Email: {{ $mainFormData->email }}</p>
+    
     <p>Phone: {{ $mainFormData->phone }}</p>
-    <p>Company: {{ $mainFormData->company }}</p>
+   
     <p>Order: {{ $mainFormData->order }}</p>
 </body>
 </html>

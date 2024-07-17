@@ -11,9 +11,9 @@ class CreateMainFormDataTable extends Migration
         Schema::create('main_form_data', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email');
+       
             $table->string('phone');
-            $table->string('company');
+      
             $table->text('order');
             $table->timestamps();
         });

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <title>База данных Arna multimedia</title>  
+    <title>Административная панель </title>  
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">    
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">   
     <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
@@ -12,12 +12,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <style>
        
     </style>
 </head>
 <body>
 <header>
+  
    
         <div class="container layout">
             <a href="" class="logo-leak">
@@ -27,115 +30,73 @@
                     </div>
             </a>
         </div>
-    
+       
+          
+         
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                @foreach ($images as $index => $image)
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $index }}" class="{{ $loop->first ? 'active' : '' }}" aria-current="{{ $loop->first ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}"></button>
+                @endforeach
+            </div>
+              <div class="carousel-inner">
+                  @foreach ($images as $image)
+                      <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                          <img class="banner-image" src="{{ asset('images/' . $image->filename) }}" class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                              <form action="{{ route('delete.image', ['id' => $image->id]) }}" method="POST">
+                                  @csrf
+                                  @method('DELETE')
+                                  <button type="submit" class="btn btn-success">Удалить</button>
+                              </form>
+                          </div>
+                      </div>
+                  @endforeach
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+         <div class="container">
+            <h2 >Загрузить изображение</h2>
+            @if ($message = Session::get('success'))
+                <div class="alert alert-success alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button>    
+                    <strong>{{ $message }}</strong>
+                </div>
+            @endif
+            <form action="{{ route('upload.image') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="stroke">
+                    <div >
+                        <input type="file" name="image" class="form-control">
+                    </div>
+                    <div >
+                        <button type="submit" class="btn btn-success">Загрузить</button>
+                    </div>
+                </div>
+              </form>
+             </div>
+           
+            
+         
+         
 </header>
 
 <section>
+    <br>
     <div class="buttons-container">
-        <button class="toggle-button active" onclick="toggleTable('form1')" data-target="form1">Звонки</button>
 
-        <button class="toggle-button" onclick="toggleTable('form2')" data-target="form2">Заявки</button>
+        <button class="toggle-button" onclick="toggleTable('form2')" data-target="form2">Сообщения</button>
 
     </div>
 
-    <div class="table-container" id="form1" >
-        <table>
-            <!-- Заголовок таблицы -->
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Имя</th>
-                    <th>Телефон</th>
-                    <th>Удаление</th>
-                    <th>Редактирование</th>
-                </tr>
-            </thead>
-            <!-- Тело таблицы с записями -->
-            <tbody>
-                @php
-                    $perPage = 25;
-                    $totalFormData = $formDatas->count();
-                    $currentPage = request()->get('page1', 1);
-                    $totalPages = ceil($totalFormData / $perPage);
-                    $offset = ($currentPage - 1) * $perPage;
-                    $paginatedFormData = $formDatas->sortByDesc('created_at')->slice($offset, $perPage);
-                @endphp
-               @php
-               $totalRecords = $formDatas->count(); // Общее количество записей
-               $startIndex = ($currentPage - 1) * $perPage; // Начальный индекс для текущей страницы
-           @endphp
-           
-           @foreach ($paginatedFormData as $formData)
-               @php
-                   $index = $totalRecords - ($startIndex + $loop->index);
-               @endphp
-               <tr>
-                   <td>{{ $index }}</td>
-                   <td>{{ $formData->name }}</td>
-                   <td>{{ $formData->phone }}</td>
-                   <td>
-                    <form action="{{ route('admin.deleteFormData', ['id' => $formData->id]) }}" method="post" class="form-changing" id="deleteForm{{ $formData->id }}">
-                        @csrf
-                        <button type="button" onclick="confirmDelete(this)">Удалить</button>
-                    </form>
-                </td>
-                   <td>
-                    <form action="{{ route('admin.editFormData', ['id' => $formData->id]) }}" method="get" class="form-changing">
-                        @csrf
-                        <button type="submit">Редактировать</button>
-                    </form>
-                </td>
-               </tr>
-           @endforeach
-            </tbody>
-        </table>
-        <div class="pagination">
-            @php
-                $currentPageKey = 'page1'; // Определяем ключ параметра текущей страницы для первой таблицы
-                if (isset($currentPageKeyForm2)) {
-                    $currentPageKey = 'page2'; // Изменяем ключ, если пагинация для второй таблицы
-                }
-            @endphp
-        
-            @if ($currentPage > 1)
-                <a href="?{{ $currentPageKey }}=1" class="page-link">&laquo; Первая</a>
-                <a href="?{{ $currentPageKey }}={{ $currentPage - 1 }}" class="page-link">&laquo; Предыдущая</a>
-            @endif
-        
-            @php
-                $showPages = 5; // Определяем количество отображаемых страниц
-                $half = floor($showPages / 2);
-                $start = $currentPage - $half;
-                $end = $currentPage + $half;
-                if ($start < 1) {
-                    $start = 1;
-                    $end = min($start + $showPages - 1, $totalPages);
-                }
-                if ($end > $totalPages) {
-                    $end = $totalPages;
-                    $start = max($end - $showPages + 1, 1);
-                }
-            @endphp
-        
-            @if ($start > 1)
-                <span>&hellip;</span>
-            @endif
-        
-            @for ($i = $start; $i <= $end; $i++)
-                <a href="?{{ $currentPageKey }}={{ $i }}" class="page-link{{ $currentPage == $i ? ' active' : '' }}">{{ $i }}</a>
-            @endfor
-        
-            @if ($end < $totalPages)
-                <span>&hellip;</span>
-            @endif
-        
-            @if ($currentPage < $totalPages)
-                <a href="?{{ $currentPageKey }}={{ $currentPage + 1 }}" class="page-link">Следующая &raquo;</a>
-                <a href="?{{ $currentPageKey }}={{ $totalPages }}" class="page-link">Последняя &raquo;</a>
-            @endif
-        </div>
-    </div>
-    
+   
     <div class="table-container" id="form2" style="display: none;">
         <table>
             <!-- Заголовок таблицы -->
@@ -143,10 +104,10 @@
                 <tr>
                     <th>№</th>
                     <th>Имя</th>
-                    <th>Email</th>
+         
                     <th>Телефон</th>
-                    <th>Компания</th>
-                    <th>Заказ</th>
+                 
+                    <th>Сообщение</th>
                     <th>Удаление</th>
                     <th>Редактирование</th>
                 </tr>
@@ -173,9 +134,9 @@
                 <tr>
                     <td>{{ $index }}</td>
                     <td>{{ $mainFormData->name }}</td>
-                    <td>{{ $mainFormData->email }}</td>
+            
                     <td>{{ $mainFormData->phone }}</td>
-                    <td>{{ $mainFormData->company }}</td>
+                   
                     <td>{{ $mainFormData->order }}</td>
                     <td>
                         <form action="{{ route('admin.deleteMainFormData', ['id' => $mainFormData->id]) }}" method="post" class="form-changing">
@@ -239,12 +200,13 @@
         </div>
 </section>
 @if(session('success'))
-    <script>alert("Успешно удалено");</script>
+    <script>alert("Успешно изменено");</script>
 @endif
 @if(session('successChange'))
     <script>alert("Запись успешно обновлена");</script>
 @endif
 <script type="text/javascript" src="{{asset('js/admin.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 </html>

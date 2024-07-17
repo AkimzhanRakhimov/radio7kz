@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <title>Рекламное агенство Arna multimedia</title>  
+        <title>Вход</title>  
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">    
         <link rel="stylesheet" href="{{ asset('css/admin.css') }}">    
         <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />

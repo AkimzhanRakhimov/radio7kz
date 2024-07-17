@@ -2,8 +2,13 @@ table {
     width: 100%;
     border-collapse: collapse;
 }
+
 .banner {
     display: none;
+}
+.stroke {
+    display: flex;
+    gap: 10%;
 }
 .layout {
     position: relative;
@@ -11,12 +16,12 @@ table {
 table th,
 table td {
     padding: 8px;
-    border: 1px solid rgb(150, 0, 15);
+    border: 1px solid rgb(117, 1, 92);
     font-size: 80%;
 }
 
 table th {
-    background-color: rgb(150, 0, 15);
+    background-color: rgb(117, 1, 92);
     color: white;
     text-align: left;
 }
@@ -46,13 +51,14 @@ table tr:hover {
     cursor: pointer;
     font-size: 16px;
     padding: 10px;
-    background-color: rgb(215, 215, 215);
-}
-
-.active {
-    background-color: rgb(150, 0, 15);
+    background: linear-gradient(
+        92.18deg,
+        rgb(117, 1, 92) -25.78%,
+        rgb(78, 7, 92) 123.02%
+    );
     color: white;
 }
+
 .pagination {
     margin-top: 20px;
     text-align: center;
@@ -74,11 +80,19 @@ table tr:hover {
 }
 
 .pagination .active {
-    background-color: rgb(150, 0, 15);
+    background: linear-gradient(
+        92.18deg,
+        rgb(117, 1, 92) -25.78%,
+        rgb(78, 7, 92) 123.02%
+    );
     color: white;
 }
 .form-changing button {
-    background-color: #ff3333;
+    background: linear-gradient(
+        92.18deg,
+        rgb(117, 1, 92) -25.78%,
+        rgb(78, 7, 92) 123.02%
+    );
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -87,7 +101,11 @@ table tr:hover {
 }
 
 .form-changing button:hover {
-    background-color: #cc0000;
+    background: linear-gradient(
+        92.18deg,
+        rgb(78, 15, 65) -25.78%,
+        rgb(76, 15, 87) 123.02%
+    );
 }
 
 @media screen and (min-width: 1440px) {

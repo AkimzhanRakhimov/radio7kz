@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class MainFormData extends Model
 {
-    protected $fillable = ['name','email', 'phone','company','order'];
+    protected $fillable = ['name', 'phone','order'];
 }

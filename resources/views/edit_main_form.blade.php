@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <title>База данных Arna multimedia</title>  
+    <title>Изменить запись</title>  
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">    
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">    
     <meta charset="utf-8">
@@ -44,27 +44,17 @@
             <input type="text" name="name" id="name" value="{{ $mainFormData->name }}" required>
         </div>
     </div>
-        <div>
-            <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" value="{{ $mainFormData->email }}" required>
-        </div>
-    </div>
+        
         <div>
             <div class="form-group">
             <label for="phone">Телефон:</label>
             <input type="text" name="phone" id="phone" value="{{ $mainFormData->phone }}" required>
         </div>
     </div>
+        
         <div>
             <div class="form-group">
-            <label for="company">Компания:</label>
-            <input type="text" name="company" id="company" value="{{ $mainFormData->company }}" required>
-        </div>
-    </div>
-        <div>
-            <div class="form-group">
-            <label for="order">Заказ:</label>
+            <label for="order">Сообщение:</label>
             <textarea name="order" rows="5" id="order" required>{{ $mainFormData->order }}</textarea>
         </div>
     </div>
